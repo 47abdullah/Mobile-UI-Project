@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Colors from '@/constants/Colors'
 import Header from '@/components/Header'
 import { Stack } from 'expo-router'
@@ -10,21 +10,20 @@ import IncomeBlock from '@/components/IncomeBlock'
 import Incomelists from '@/data/income.json'
 import SpendingBlock from '@/components/SpendingBlock'
 import SpendingList from '@/data/spending.json'
+import CustomerList from '@/components/CustomerList'
+
+const initialData = [
+  { value: 47, color: Colors.tintColor, focused: true, text: '47%' },
+  { value: 25, color: Colors.blue, text: "16%" },
+  { value: 16, color: Colors.white, text: "16%" },
+  { value: 18, color: "#FFA5BA", gradientCenterColor: '#FF7F97', text: '18%' },
+];
 
 export default function index() {
 
 
-  const pieData = [
-    {
-      value: 47,
-      color: Colors.tintColor,
-      focused: true,
-      text: '47%'
-    },
-    { value: 40, color: Colors.blue, text: "40%" },
-    { value: 16, color: Colors.white, text: "16%" },
-    { value: 3, color: "#FFA5BA", gradientCenterColor: '#FF7F97' },
-  ];
+
+
   return (
     <>
       <Stack.Screen
@@ -41,7 +40,7 @@ export default function index() {
             </View>
             <View style={{ paddingVertical: 20, alignItems: 'center' }}>
               <PieChart
-                data={pieData}
+                data={initialData}
                 donut
                 showGradient
                 sectionAutoFocus

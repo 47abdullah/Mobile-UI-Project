@@ -4,6 +4,7 @@ import { ExpenseType } from '@/types'
 import Colors from '@/constants/Colors';
 import { Feather } from '@expo/vector-icons';
 
+
 export default function ExpenseBlock({ expensList }: { expensList: ExpenseType[] }) {
  
     const renderItem: ListRenderItem<Partial<ExpenseType>> = ({ item, index }) => {

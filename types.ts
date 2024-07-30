@@ -17,3 +17,4 @@ export interface SpendingType {
   amount: string;
   date: string;
 }
+
