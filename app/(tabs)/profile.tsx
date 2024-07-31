@@ -1,12 +1,15 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import Colors from '@/constants/Colors'
+import DataList from '@/components/DataList'
 
 export default function profile() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>profile</Text>
-    </View>
+   <>
+    <DataList/>
+   </>
+     
+   
   )
 }
 

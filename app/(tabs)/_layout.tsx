@@ -30,7 +30,6 @@ export default function _layout() {
             borderColor:'#333',
             borderTopColor:'#333',
             elevation:0
-            
           },
           tabBarShowLabel: false,
           tabBarInactiveTintColor: '#999',
@@ -110,6 +109,7 @@ export default function _layout() {
 
       </Tabs>
       <StatusBar style='light' />
+      
     </>
 
   )

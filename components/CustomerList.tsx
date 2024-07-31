@@ -23,6 +23,7 @@ const CustomerList: React.FC = () => {
             <TouchableOpacity>
                 <View style={styles.listItem}>
                     <Text style={styles.listItemText}>{item.name}</Text>
+                    <Text style={styles.listItemText}>{item.company.name}</Text>
                     <Text style={styles.listItemText}><Text style={{ fontSize: 18, fontWeight: 'bold' }}>Email:</Text>{item.email}</Text>
                 </View>
             </TouchableOpacity>
@@ -30,12 +31,12 @@ const CustomerList: React.FC = () => {
         )
     };
 
-    const handleSearch=(text:string)=>{
+    const handleSearch = (text: string) => {
         setSearchQuery(text);
-        const filteredUsers=users.filter((user)=>{
-            const name=user.name.toLocaleLowerCase();
-            const email=user.email.toLocaleLowerCase();
-            const query=text.toLocaleLowerCase();
+        const filteredUsers = users.filter((user) => {
+            const name = user.name.toLocaleLowerCase();
+            const email = user.email.toLocaleLowerCase();
+            const query = text.toLocaleLowerCase();
             return name.includes(query) || email.includes(query)
         });
         setUsers(filteredUsers);
@@ -59,6 +60,8 @@ const CustomerList: React.FC = () => {
                     style={styles.list}
                     showsHorizontalScrollIndicator={false}
                 />
+                <View style={{ backgroundColor: Colors.black, padding: 55 }}>
+                </View>
             </View>
         </SafeAreaView>
     );
@@ -67,7 +70,7 @@ const CustomerList: React.FC = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.black, 
+        backgroundColor: Colors.black,
         paddingHorizontal: 20,
     },
     list: {
@@ -87,19 +90,19 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: Colors.white,
     },
-    textInput:{
-        backgroundColor:Colors.white,
-        borderRadius:15,
-        marginHorizontal:15,
+    textInput: {
+        backgroundColor: Colors.white,
+        borderRadius: 15,
+        marginHorizontal: 15,
     },
-    searchBarContainer:{
+    searchBarContainer: {
         padding: 10,
         backgroundColor: Colors.white,
         borderRadius: 15,
         width: '90%',
         alignSelf: 'center',
-       
-       
+
+
     }
 })
 

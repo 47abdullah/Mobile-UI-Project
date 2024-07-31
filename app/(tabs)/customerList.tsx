@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomerList from '@/components/CustomerList'
 import { View } from 'react-native'
+import DataList from '@/components/DataList'
 
 
 
@@ -8,7 +9,9 @@ import { View } from 'react-native'
 export default function customerList() {
   return (
     <>
+   
       <CustomerList />
+     
     </>
 
   )
