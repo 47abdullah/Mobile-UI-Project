@@ -105,6 +105,25 @@ export default function _layout() {
             headerShown: false
           }}
         />
+           <Tabs.Screen
+          name='uıscreen'
+          options={{
+            tabBarIcon: ({ color, size, focused }) => {
+              return (
+                <View style={{
+                  padding: 12,
+                  borderRadius: 30,
+                  backgroundColor: focused ? Colors.tintColor : Colors.grey
+                }}>
+                  <FontAwesome name='arrow-circle-left' size={18} color={color} />
+                </View>
+              )
+
+            },
+            headerShown: false
+          }}
+        />
+    
     
 
       </Tabs>

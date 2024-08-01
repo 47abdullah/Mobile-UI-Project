@@ -1,11 +1,11 @@
-interface CartTypes {
+export interface CartTypes {
   carts: Cart[];
   total: number;
   skip: number;
   limit: number;
 }
 
-interface Cart {
+export interface Cart {
   id: number;
   products: Product[];
   total: number;
@@ -15,7 +15,7 @@ interface Cart {
   totalQuantity: number;
 }
 
-interface Product {
+  export interface Product {
   id: number;
   title: string;
   price: number;
@@ -25,3 +25,4 @@ interface Product {
   discountedTotal: number;
   thumbnail: string;
 }
+
